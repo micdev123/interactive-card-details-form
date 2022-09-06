@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+
+  <!-- Completed state start -->
+
+  <!-- Thank you!
+  We've added your card details
+  Continue -->
+
+  <main class="main_container">
+    <!-- Card -->
+    <section id="left_side">
+      <!-- Card Front -->
+      <div class="card_front">
+        <div class="card_front_content">
+          <img src="./images/card-logo.svg" alt="" class="card_logo">
+          <!-- Card number -->
+          <p class="card_number output">0000 0000 0000 0000</p>
+          <div class="content_footer">
+            <p class="cardholderName output">Jane Appleseed</p>
+            <p><span class="month output">00</span>/<span class="year output">00</span></p>
+          </div>
+        </div>
+        <img src="./images/bg-card-front.png" alt="card-front" class="cards">
+        <div class="card_front_gradient"></div>
+      </div>
+      <!-- Card back -->
+      <div class="card_back">
+        <p class="cvc_number output">000</p>
+        <img src="./images/bg-card-back.png" alt="" class="cards">
+        <div class="card_back_gradient"></div>
+      </div>
+    </section>
+
+    <!-- Card Form -->
+    <section id="right_side">
+      <div class="card_form">
+        <form action="">
+          <!-- Cardholder Name -->
+          <div class="form_group">
+            <label for="cardholder_name" class="label">Cardholder Name</label>
+            <input type="text" id="cardholder_name" placeholder="eg. Jane Appleseed" class="input">
+            <p class="error"></p>
+          </div>
+          <!-- Card Number -->
+          <div class="form_group">
+            <label for="card_number" class="label">Card Number</label>
+            <input type="text" placeholder="eg. 1234 5678 9123 0000" id='card_number_input' class="input number_input">
+            <p class="error wrong_format"></p>
+          </div>
+
+          <div class="exp_date_cvc">
+            <!-- Exp. Date -->
+            <div class="exp_date">
+              <label>Exp. Date (MM/YY)</label>
+              <div>
+                <input type="text" placeholder="MM" id="month_input" class="input">
+                <input type="text" placeholder="YY" id="year_input" class="input">
+              </div>
+              <p class="error"></p>
+            </div>
+
+            <!-- CVC -->
+            <div class="cvc">
+              <label>CVC</label>
+              <div>
+                <input type="text" placeholder="eg. 123" id="cvc_code" class="input number_input">
+              </div>
+              <p class="error wrong_format"></p>
+            </div>
+          </div>
+          <button id="confirm">Confirm</button>
+        </form>
+      </div>
+
+      <!-- Thank you -->
+      <div class="thank_you">
+        <img src="./images/icon-complete.svg" alt="">
+        <h2>Thank You!</h2>
+        <p>We've added your card details</p>
+        <button class="thank_you_btn">Continue</button>
+      </div>
+    </section>
+  </main>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <!-- script js -->
+  <script src="./src/main.js"></script>
+</body>
+</html>

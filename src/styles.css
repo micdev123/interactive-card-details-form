@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;550&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%); 
+    --Very-dark-violet: hsl(278, 68%, 11%);
+
+    --font-base: "Space Grotesk", sans-serif;
+    --font-weight : 500;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-base);
+}
+
+.main_container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+#left_side {
+    width: 30%;
+    margin: 0;
+    height: 100%;
+    background-image: url('../images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.cards {
+    width: 22rem;
+    object-fit: contain;
+}
+
+.card_front {
+    position: absolute;
+    top: 6rem;
+    right: -6rem;
+}
+
+.card_front_gradient {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    width: 3rem;
+    height: 100%;
+    background: rgba(147, 150, 151, 0.989);
+    filter: blur(950px);
+}
+
+.card_front_content {
+    position: absolute;
+    /* top: 1.5rem; */
+    /* left: 1.5rem; */
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--White);
+    font-weight: 400;
+}
+
+.card_logo {
+    width: 4rem;
+    margin-bottom: 2.8rem;
+}
+
+.card_number {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.content_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.content_footer p {
+    font-size: 0.85rem;
+}
+
+.content_footer p:last-child {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.card_back {
+    position: absolute;
+    bottom: 5.5rem;
+    right: -10rem;
+}
+
+.card_back_gradient {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 100%;
+    background: rgba(147, 150, 151, 0.989);
+    filter: blur(950px);
+}
+
+.cvc_number {
+    position: absolute;
+    bottom: 5.9rem;
+    right: 3rem;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    color: var(--White);
+    font-weight: 500;
+}
+
+#right_side {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.card_form {
+    width: 21rem;
+    /* display: none; */
+}
+
+.form_group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    font-weight: var(--font-weight);
+    word-spacing: 2px;
+}
+
+input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.5px solid var(--Light-grayish-violet);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 1.7px solid var(--Very-dark-violet);
+}
+
+.error, .wrong_format {
+    font-size: 0.7rem;
+    margin-top: 8px;
+    color: #cf1212;
+}
+
+input.error_border {
+    border: 1px solid #c00f0f;
+}
+
+.exp_date_cvc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exp_date_cvc label {
+    font-size: 0.75rem;
+    font-weight: var(--font-weight);
+    word-spacing: 2px;
+}
+
+.exp_date_cvc input {
+    margin-top: 5px;
+}
+
+.exp_date {
+    width: 9rem;
+    /* background-color: yellow; */
+}
+
+.exp_date input {
+    width: 4rem;
+}
+
+.cvc {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 10px; */
+    /* width: 12rem; */
+}
+
+
+#confirm, .thank_you_btn {
+    width: 100%;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.thank_you {
+    width: 18rem;
+    text-align: center;
+    display: none;
+}
+
+.thank_you img {
+    width: 3.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.thank_you h2 {
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--Very-dark-violet);
+}
+
+.thank_you p {
+    color: var(--Dark-grayish-violet);
+    font-size: 0.9rem;
+    font-weight: 550;
+    margin-bottom: 2rem;
+}
+
+
+/* Mobile Devices :: Media Queries */
+@media screen and (min-width : 320px) and (max-width : 480px) {
+    .main_container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #left_side {
+        width: 100%;
+        margin-bottom: 3rem;
+        height: 30vh;
+    }
+
+    .cards {
+        width: 17.5rem;
+        /* display: none; */
+    }
+
+    .card_front {
+        width: 100%;
+        position: relative;
+        top: 7.35rem;
+        left: 0.8rem;
+        z-index: 100;
+    }
+
+    .card_front_gradient {
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        width: 18rem;
+        height: 5rem;
+        background: rgba(147, 150, 151, 0.989);
+        filter: blur(950px);
+    }
+
+    .card_back {
+        width: 100%;
+        position: relative;
+        top: -8rem;
+        bottom: 0;
+        right: -4.2rem;
+    }
+
+    .cvc_number {
+        bottom: 4.65rem;
+        right: 7rem;
+    }
+
+    .card_front_content {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .card_logo {
+        width: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .card_number {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+
+    .content_footer {
+        width: 75%;
+        /* background-color: yellow; */
+    }
+
+
+    .content_footer p {
+        font-size: 0.85rem;
+        /* color: red; */
+    }
+
+    #right_side {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3rem 0 0 0;
+    }
+
+    .card_form {
+        width: 100%;
+        /* display: none; */
+    }
+
+
+    .exp_date {
+        width: 9rem;
+    }
+
+    .exp_date input {
+        width: 4rem;
+    }
+
+    .cvc input {
+        width: 11rem;
+    }
+}
